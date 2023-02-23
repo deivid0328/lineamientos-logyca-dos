@@ -1,0 +1,14 @@
+<div class="wrap">
+    <div class="brand">
+        <img src="../../assets/logo-small.png">
+        <p>Lineamientos de desarrollo para plataformas LOGYCA</p>
+    </div>
+    <div class="homeContainer">
+        <mat-card class="homeContainer__card" *ngFor="let cardInfo of dataText.listMenu">
+            <mat-icon>{{cardInfo.iconMenu}}</mat-icon>
+            <mat-card-title>
+                <a href="{{cardInfo.path}}">{{cardInfo.namePrincipal}}</a>
+            </mat-card-title>
+        </mat-card>
+    </div>
+</div>

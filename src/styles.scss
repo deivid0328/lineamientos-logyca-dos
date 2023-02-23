@@ -1,0 +1,158 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "globalStyle/variable.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: museo;
+    src: url(assets/font/MuseoSans.otf) format("opentype");
+}
+
+body {
+    font-family: museo !important;
+    background-color: $grey-backGround;
+    color: $logyca-grey-regular;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.wrap {
+    width: 100%;
+    padding: 50px;
+    overflow: auto;
+
+    mat-card {
+        padding: 30px;
+
+        mat-card-header {
+            .icon_avatar {
+                color: $logyca-orange-regular;
+                background-color: $silver-100;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            mat-card-subtitle {
+                text-align: justify;
+            }
+        }
+
+        mat-card-content {
+            margin: 25px 0 50px 0;
+
+            .sectionSubtitle {
+                font-weight: 700;
+                font-size: 16px;
+                margin: 25px 0;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            .sectionItemTitle {
+                color: $logyca-orange-regular;
+                font-weight: 500;
+            }
+
+            .codeContainer {
+                margin-top: 16px;
+            }
+
+            .actionButton {
+                form {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 25px;
+
+                    button {
+                        margin-left: 16px;
+                    }
+                }
+            }
+
+            .note {
+                background-color: $silver-50;
+                padding: 16px;
+                border-radius: 8px;
+
+                &__title {
+                    display: flex;
+                    align-items: center;
+                    color: $logyca-orange-regular;
+                    margin-bottom: 5px;
+
+                    .title {
+                        font-weight: 700;
+                        margin-left: 16px;
+                    }
+                }
+
+                &__content {
+                    text-align: justify;
+                }
+            }
+        }
+        a{
+            color: $logyca-orange-regular;
+        }
+    }
+
+    button {
+        text-transform: uppercase;
+        min-width: 150px;
+        height: 56px;
+    }
+
+    ul{
+        margin-left: 25px;
+    }
+
+    ul li::marker {
+        color: $logyca-orange-regular;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrap {
+        padding: 25px;
+
+        mat-card {
+            padding: 16px;
+        }
+    }
+}
+
+table {
+    width: 100%;
+
+    th {
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        text-align: justify !important;
+        background-color: $silver-100;
+        font-size: 50px;
+        border-bottom: none;
+    }
+
+    th:first-child {
+        border-radius: 8px 0 0 8px;
+
+    }
+
+    th:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+    td {
+        color: $logyca-grey-regular;
+    }
+}

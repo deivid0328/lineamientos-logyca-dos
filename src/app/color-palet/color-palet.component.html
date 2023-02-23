@@ -1,0 +1,26 @@
+<div class="wrap">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="icon_avatar">
+                <mat-icon>{{cardHead.icon}}</mat-icon>
+            </div>
+            <mat-card-title>{{cardHead.title}}</mat-card-title>
+            <mat-card-subtitle>{{cardHead.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content *ngFor="let item of colorsInfo">
+            <div class="sectionSubtitle">{{item.namePalet}}</div>
+            <div class="colorPaletContent">
+                <div class="colorPaletContent__group" *ngFor="let info of item.colors">
+                    <div class="name">
+                        {{info.nameColor}}
+                    </div>
+                    <div class="color" [ngStyle]="{'background-color': info.code}">
+                    </div>
+                    <div class="code">
+                        {{info.code}}
+                    </div>
+                </div>
+            </div>   
+        </mat-card-content>
+    </mat-card>
+</div>

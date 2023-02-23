@@ -1,0 +1,116 @@
+@import "../globalStyle/variable.scss";
+
+.header {
+    background-color: $grey-header;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    text-transform: uppercase;
+
+    .titlePlatform {
+        font-weight: 700;
+        margin-left: 20px;
+    }
+}
+
+mat-drawer-container {
+    height: calc(100vh - 45px);
+
+    mat-drawer {
+        width: 300px;
+
+        .drawerContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+
+            .nav {
+                width: 100%;
+                padding: 20px;
+                overflow: auto;
+
+                &__head {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .avatar {
+                        color: $logyca-grey-regular;
+                        background-color: $silver-300;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .title {
+                        margin-top: 10px;
+                        font-weight: 700;
+                    }
+
+                    .subtitle {
+                        color: $silver-500;
+                        font-weight: lighter;
+                    }
+                }
+
+                &__menu {
+                    mat-expansion-panel {
+                        border: none;
+                        box-shadow: none;
+
+                        mat-expansion-panel-header {
+                            mat-panel-title {
+                                font-weight: 500;
+
+                                mat-icon {
+                                    margin-right: 10px;
+                                    color: $silver-400;
+                                }
+                            }
+                        }
+
+                        .menuList {
+                            margin-left: 25px;
+                            padding: 5px;
+                            border-bottom: 1px solid $silver-200;
+                            cursor: pointer;
+                            a {
+                                text-decoration: none;
+                                color: $logyca-grey-regular;
+                            }
+
+                        }
+                        .menuList:hover{
+                            background-color: $silver-50;
+                        }
+
+                    }
+                }
+            }
+
+            .nav::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            .nav::-webkit-scrollbar-thumb {
+                background: $logyca-grey-light;
+                border-radius: 5px;
+            }
+
+            .menuFooter {
+                border-top: 1px solid $silver-300;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                color: $silver-500;
+            }
+        }
+    }
+}

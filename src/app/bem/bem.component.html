@@ -1,0 +1,55 @@
+<div class="wrap">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="icon_avatar">
+                <mat-icon>{{cardHead.icon}}</mat-icon>
+            </div>
+            <mat-card-title>{{cardHead.title}}</mat-card-title>
+            <mat-card-subtitle>{{cardHead.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="sectionSubtitle">Bloques, Elementos y Modificadores</div>
+            <p>
+                Para lograr su objetivo, la metodología se centra en la reutilización de código. Además, busca otorgar
+                un mayor entendimiento hacia qué nos referimos cada vez que construimos un nuevo proyecto. Como
+                resultado, crea una documentación explícita en cada nueva declaración.
+
+                BEM tiene como horizonte modularizar lo máximo posible cada uno de los bloques de código dispuesto. Se
+                centra en tres parámetros o variables posibles: Bloques (div, section, article, ul, ol, etc.), elementos
+                (a, button, li, span, etc.) y modificadores. Estos últimos se definen de acuerdo a la posterior
+                utilización que haga el desarrollador a cargo.
+            </p>
+            <div class="sectionItemTitle">Bloques</div>
+            <p>Es un contenedor donde se encontrarán los diferentes elementos. Por ejemplo, un encabezado (header), una
+                barra lateral (sidebar/aside) un área de contenido principal (main) y un pie de página (footer), se
+                consideraría cada uno como un bloque.
+
+                El bloque de elementos corresponde a la raíz de la clase y deberá ir siempre primero. Cuando ya está
+                definido es posible nombrar los elementos que compondrán la estructura final y su contenido.</p>
+            <div class="sectionItemTitle">Elementos</div>
+            <p>
+                El elemento es una de las variadas piezas que compondrán la estructura de un bloque. El bloque es el
+                todo y los elementos son las piezas de este bloque.
+
+                De acuerdo a la metodología BEM, cada elemento se escribe después del bloque padre, usando dos guiones
+                bajos.
+            </p>
+            <div class="sectionItemTitle">Modificadores</div>
+            <p>El ejercicio de nombrar las clases sirve para que los elementos puedan repetirse. Si los elementos son
+                los mismos, no será necesario escribir nuevas clases en otras áreas del sitio.
+
+                Para modificar el estilo de un elemento específico, existen los modificadores. Estos se usan agregando
+                un doble guión
+                justo después del elemento o bloque que se quiere modificar.</p>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="sectionSubtitle">Estructura HTML</div>
+            <p>Aquí esta el ejemplo de como se estructura el codigo (En el menu izquierdo tambien encontrará el archivo.scss):</p>
+            <div class="codeContainer">
+                <iframe width="100%" height="500"
+                    src="https://stackblitz.com/edit/web-platform-yry5lg?embed=1&file=index.html&theme=dark&view=editor">
+                </iframe>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

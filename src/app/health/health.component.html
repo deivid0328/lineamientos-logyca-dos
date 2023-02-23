@@ -1,0 +1,64 @@
+<div class="wrap">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="icon_avatar">
+                <mat-icon>{{cardHead.icon}}</mat-icon>
+            </div>
+            <mat-card-title>{{cardHead.title}}</mat-card-title>
+            <mat-card-subtitle>{{cardHead.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="sectionSubtitle">HEALTH: ?token=X (con token)</div>
+            <div class="codeContainer">
+                <iframe width="100%" height="500"
+                    src="https://stackblitz.com/edit/js-hhad3y?embed=1&file=healthToken.json&hideDevTools=1&hideExplorer=1&hideNavigation=1&theme=dark&view=editor">
+                </iframe>
+            </div>
+            <div class="actionButton">
+                <form action="../../assets/docs/health_con_token.json?token=XXIXIXKXKXKXIKI" method="get"
+                    target="_blank">
+                    <button mat-stroked-button type="submit">
+                        <span class="material-icons">
+                            code
+                        </span>
+                        ver ejemplo
+                    </button>
+                </form>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="sectionSubtitle">HEALTH Sin token</div>
+            <div class="codeContainer">
+                <iframe width="100%" height="250"
+                    src="https://stackblitz.com/edit/js-wvbsoj?embed=1&file=healthSinToken.json&hideExplorer=1&hideNavigation=1&theme=dark&view=editor">
+                </iframe>
+            </div>
+            <div class="actionButton">
+                <form action="../../assets/docs/health_sin_token.json" method="get" target="_blank">
+                    <button mat-stroked-button type="submit">
+                        <span class="material-icons">
+                            code
+                        </span>
+                        ver ejemplo
+                    </button>
+                </form>
+            </div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="sectionSubtitle">Integración del health de los microservicios con el monitoreo</div>
+            <div class="nagiosImages">
+                <img src="../../assets/health_integration.png">
+            </div>
+            <div class="actionButton">
+                <form action="../../assets/health_integration.png" target="_blank">
+                    <button mat-stroked-button type="submit">
+                        <span class="material-icons">
+                            code
+                        </span>
+                        ver ejemplo
+                    </button>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

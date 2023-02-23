@@ -1,0 +1,19 @@
+@import "../../globalStyle/variable.scss";
+
+.wrap{
+    mat-card{
+        mat-card-content{
+            table{
+                .mat-column-module{
+                    width: 30%;
+                }
+                .mat-column-language{
+                    width: 30%;
+                }
+                .mat-column-framework{
+                    width: 30%;
+                }
+            }
+        }
+    }
+}

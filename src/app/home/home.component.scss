@@ -1,0 +1,53 @@
+@import "../../globalStyle/variable.scss";
+
+.wrap {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .brand {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+
+        img {
+            width: 150px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .homeContainer {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 26px;
+
+        &__card {
+            mat-icon {
+                width: 100%;
+                height: 120px;
+                border-radius: 5px;
+                font-size: 50px;
+                color: $silver-400;
+                background-color: $silver-50;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            mat-card-title {
+                text-align: center;
+                padding-top: 25px;
+                cursor: pointer;
+
+                a {
+                    color: $logyca-grey-regular;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

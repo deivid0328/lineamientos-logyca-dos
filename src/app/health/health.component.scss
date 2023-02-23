@@ -1,0 +1,14 @@
+@import "../../globalStyle/variable.scss";
+
+.wrap{
+    mat-card{
+        mat-card-content{
+            .nagiosImages{
+                img{
+                    width: 100%;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}

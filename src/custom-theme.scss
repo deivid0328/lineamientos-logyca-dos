@@ -1,0 +1,134 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+
+//Predefine palets
+
+$logyca_orangeTheme: (
+ 50: #fbe8e6,
+ 100: #fecbb9,
+ 200: #fda98d,
+ 300: #fc8760,
+ 400: #fb6c3c, 
+ 500: #ff551c, 
+ 600: #f44b02, 
+ 700: #e64500, 
+ 800: #d93d00, 
+ 900: #c03000, 
+ contrast: (
+   50: #c03000,
+   100: #c03000,
+   200: #c03000,
+   300: #c03000,
+   400: white,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+
+$logyca_indigoTheme: (
+ 50: #e0f4f1,
+ 100: #b5e4da,
+ 200: #87d2c3,
+ 300: #59c0ab,
+ 400: #00B398, 
+ 500: #00a586, 
+ 600: #128568, 
+ 700: #0d7559, 
+ 800: #06654c, 
+ 900: #004932, 
+ contrast: (
+   50: #004932,
+   100: #004932,
+   200: #004932,
+   300: #004932,
+   400: white,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+
+
+$logyca_warnTheme: (
+ 50: #fdeaef,
+ 100: #fbcad4,
+ 200: #e9949d,
+ 300: #de6977,
+ 400: #e94358, 
+ 500: #ee2740, 
+ 600: #df1c3e, 
+ 700: #cd0e37, 
+ 800: #c00030, 
+ 900: #b10024, 
+ contrast: (
+   50: #c00030,
+   100: #c00030,
+   200: #c00030,
+   300: #c00030,
+   400: white,
+   500: white,
+   600: white,
+   700: white,
+   800: white,
+   900: white,
+ )
+);
+
+$my-primary: mat.define-palette($logyca_orangeTheme, 500);
+$my-accent: mat.define-palette($logyca_indigoTheme);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette($logyca_warnTheme);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ )
+));
+
+@include mat.all-component-themes($my-theme);
+
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $logyca-colabora-primary: mat.define-palette(mat.$indigo-palette);
+// $logyca-colabora-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// $logyca-colabora-warn: mat.define-palette(mat.$red-palette);
+
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+// $logyca-colabora-theme: mat.define-light-theme((
+//   color: (
+//     primary: $logyca-colabora-primary,
+//     accent: $logyca-colabora-accent,
+//     warn: $logyca-colabora-warn,
+//   )
+// ));
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include mat.all-component-themes($logyca-colabora-theme);
+
+
+

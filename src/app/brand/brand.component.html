@@ -1,0 +1,27 @@
+<div class="wrap">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="icon_avatar">
+                <mat-icon>{{cardHead.icon}}</mat-icon>
+            </div>
+            <mat-card-title>{{cardHead.title}}</mat-card-title>
+            <mat-card-subtitle>{{cardHead.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <embed src="../../assets/docs/MANUAL 2022.pdf" type="application/pdf" width="100%" height="700px" />
+        </mat-card-content>
+        <mat-card-content>
+            <div class="actionButton">
+                <form action="../../assets/logos.rar"
+                    target="_blank">
+                    <button mat-stroked-button type="submit">
+                        <span class="material-icons">
+                            file_download
+                        </span>
+                        Descargar logos
+                    </button>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

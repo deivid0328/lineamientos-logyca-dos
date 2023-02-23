@@ -1,0 +1,29 @@
+@import "../../globalStyle/variable.scss";
+.wrap{
+    mat-card{
+        mat-card-content{
+            .videoContent{
+                text-align: center;
+                margin-top: 25px;
+                iframe{
+                    width: 70%;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .wrap {
+        mat-card {
+            mat-card-content{
+                .videoContent{
+                    iframe{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "../../globalStyle/variable.scss";
+
+.wrap {
+    mat-card {
+        mat-card-content {
+            .sectionItemTitle{
+                margin: 25px 0;
+            }
+            .fontNormal {
+                font-size: 30px;
+                font-weight: 300;
+                word-break: break-all;
+            }
+            .fontItalic {
+                font-size: 30px;
+                font-weight: 300;
+                font-style: italic;
+                word-break: break-all;
+            }
+            .fontBold {
+                font-size: 30px;
+                font-weight: 900;
+                word-break: break-all;
+            }
+            .imgIcon{
+                width: 100%;
+            }
+        }
+    }
+}

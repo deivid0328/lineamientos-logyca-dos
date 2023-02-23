@@ -1,0 +1,46 @@
+<div class="header">
+  <button type="button" mat-icon-button color="basic" (click)="drawer.toggle()" matTooltip="Menu Principal"
+    matTooltipPosition="below">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="titlePlatform">
+    Lineamientos de desarrollo LOGYCA
+  </div>
+</div>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="over">
+    <div class="drawerContent">
+      <div class="nav">
+        <div class="nav__head">
+          <div class="avatar">
+            <mat-icon>list_alt</mat-icon>
+          </div>
+          <div class="title">Menu de Navegación</div>
+          <div class="subtitle">Lineamientos</div>
+        </div>
+        <div class="nav__menu">
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let menu of dataText.listMenu">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>{{menu.iconMenu}}</mat-icon>
+                  {{menu.namePrincipal}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="menuList" *ngFor="let subMenu of menu.submenu">
+                <a href="{{subMenu.path}}">{{subMenu.nameSubmenu}}</a>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+      <div class="menuFooter">
+        <img src="../assets/logo-menu.png" alt="">
+        <p>Versión 2.0</p>
+      </div>
+    </div>
+  </mat-drawer>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
